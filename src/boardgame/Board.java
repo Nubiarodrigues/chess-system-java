@@ -27,5 +27,15 @@ public class Board {
 	public void setColumns(int columns) {
 		this.columns = columns;
 	}
+	
+	// método para retornar a linha e coluna do quadro de xadrez
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
+	
+	// método para retornar a posição da peça no quadro
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
 
 }
