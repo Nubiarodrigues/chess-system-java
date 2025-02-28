@@ -25,6 +25,13 @@ public class ChessMatch {
 
 		return mat;
 	}
+	
+	// método auxiliar para usar np Program para imprimir as possíveis posições a partir de uma posição de origem
+	public boolean[][] possibleMoves(ChessPosition sourcePosition){
+		Position position = sourcePosition.toPosition();
+		ValidateSourcePosition(position);
+		return board.piece(position).possibleMoves();
+	}
 
 	// movendo peça origem para destino (retorna posição capturada)
 	public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
